@@ -34,8 +34,7 @@ uint64_t nextPrime(uint64_t value) {
         if (checkPrime(value)) {
             return value;
             break;
-        }
-        else {
+        } else {
             value++;
         }
     }
