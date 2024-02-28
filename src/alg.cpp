@@ -1,11 +1,11 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
+#include <cmath>
 #include "alg.h"
-#include <math.h>
+
 
 bool checkPrime(uint64_t value) {
-    for (int i = 2; i < (uint64_t)(pow(value, 0.5) + 1); i++)
-    {
+    for (int i = 2; i < (uint64_t)(sqrt(value) + 1); i++){
         if (value % i == 0)
             return false;
     }
@@ -34,8 +34,7 @@ uint64_t nextPrime(uint64_t value) {
             return value;
             break;
         }
-        else
-            value++;
+        else value++;
     }
 }
 
@@ -48,4 +47,3 @@ uint64_t sumPrime(uint64_t hbound) {
     }
     return s;
 }
-
